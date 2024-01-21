@@ -1,0 +1,20 @@
+name: artifact2nexus
+on:
+  workflow_dispatch:
+    inputs:
+      enter_name:
+        description: 'enter your nme only'
+        default: kapi*
+        required: true
+      enter_second_name:
+        description: 'enter second name'
+        default: gadeka        
+        required: true
+jobs:
+  repo:
+    runs-on: ubuntu-latest
+  steps:
+    - name: enter your name
+      run: echo "$enter_name" 
+    - name: enter other name
+      run: echo "$enter_second_name"
