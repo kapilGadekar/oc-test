@@ -7,10 +7,11 @@ on:
         default: /home/
         required: true
 jobs:
-  runs-on: ubuntu-latest
-  env:
-    ZIP_SOURCE_PATH: ${{ inputs.ZIP_SOURCE_PATH }}
-  steps:
-    - name: print name
-      run: |
-            echo $ZIP_SOURCE_PATH
+  artifact:
+    runs-on: ubuntu-latest
+    env:
+      ZIP_SOURCE_PATH: ${{ inputs.ZIP_SOURCE_PATH }}
+      steps:
+      - name: print name
+        run: |
+              echo $ZIP_SOURCE_PATH
